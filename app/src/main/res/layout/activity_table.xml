@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.TableActivity">
 
-    <android.support.v7.widget.Toolbar>
-
-    </android.support.v7.widget.Toolbar>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/table_recycler_view"
         android:layout_width="0dp"
