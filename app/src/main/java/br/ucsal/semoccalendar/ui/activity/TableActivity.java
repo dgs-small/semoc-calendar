@@ -20,6 +20,8 @@ public class TableActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
 
+        getSupportActionBar().setTitle("Mesas Redondas");
+
         RecyclerView recyclerView = findViewById(R.id.table_recycler_view);
 
         recyclerView.setAdapter(new EventListAdapter(this, listTest()));
