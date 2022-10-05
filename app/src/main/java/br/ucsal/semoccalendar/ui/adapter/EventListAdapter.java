@@ -14,10 +14,8 @@ import br.ucsal.semoccalendar.model.Event;
 public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.ViewHolder> {
 
     private final List<Event> events;
-    private final Context context;
 
-    public EventListAdapter(Context context, List<Event> events) {
-        this.context = context;
+    public EventListAdapter(List<Event> events) {
         this.events = events;
     }
 
@@ -38,7 +36,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.event_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_item, parent, false);
         return new ViewHolder(view);
     }
 

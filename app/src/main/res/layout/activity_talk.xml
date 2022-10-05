@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.TalkActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TALK"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="83dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/talk_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/event_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
