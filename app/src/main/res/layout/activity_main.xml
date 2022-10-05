@@ -6,51 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainActivity">
 
-    <TextView
-        android:id="@+id/main_label_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="SEMOC Calendar"
-        android:textColor="#6200EE"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/main_button_table"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <Button
         android:id="@+id/main_button_table"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="80dp"
+        android:text="Mesas Redondas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_label_title"
-        android:text="Mesas Redondas" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/main_button_journey"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Jornada de Pesquisa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_button_table"
-        android:text="Jornada de Pesquisa" />
+        app:layout_constraintTop_toBottomOf="@+id/main_button_table" />
 
     <Button
         android:id="@+id/main_button_talk"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Bate Papo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_button_journey" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="317dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_button_journey"
-        android:text="Bate Papo" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/semoc" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

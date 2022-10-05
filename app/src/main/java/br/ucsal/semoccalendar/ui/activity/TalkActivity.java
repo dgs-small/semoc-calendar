@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
+import java.util.Objects;
+
 import br.ucsal.semoccalendar.R;
 
 public class TalkActivity extends AppCompatActivity {
@@ -14,6 +16,6 @@ public class TalkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_talk);
 
-        getSupportActionBar().setTitle("Bate Papo");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Bate Papo");
     }
 }

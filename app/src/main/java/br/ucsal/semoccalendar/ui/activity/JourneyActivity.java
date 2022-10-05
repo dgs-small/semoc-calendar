@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
+import java.util.Objects;
+
 import br.ucsal.semoccalendar.R;
 
 public class JourneyActivity extends AppCompatActivity {
@@ -14,6 +16,6 @@ public class JourneyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journey);
 
-        getSupportActionBar().setTitle("Jornada de Pesquisa");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Jornada de Pesquisa");
     }
 }
