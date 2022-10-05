@@ -13,8 +13,5 @@ public class JourneyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journey);
-
-        Button goBackButton = findViewById(R.id.journey_button_goback);
-        goBackButton.setOnClickListener(view -> finish());
     }
 }

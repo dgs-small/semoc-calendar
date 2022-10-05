@@ -19,14 +19,10 @@ public class TableActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
-        
-        Button goBackButton = findViewById(R.id.table_button_goback);
 
         RecyclerView recyclerView = findViewById(R.id.table_recycler_view);
 
         recyclerView.setAdapter(new EventListAdapter(this, listTest()));
-
-        goBackButton.setOnClickListener(view -> finish());
     }
 
     private List<Event> listTest(){

@@ -13,8 +13,5 @@ public class TalkActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_talk);
-
-        Button goBackButton = findViewById(R.id.talk_button_goback);
-        goBackButton.setOnClickListener(view -> finish());
     }
 }

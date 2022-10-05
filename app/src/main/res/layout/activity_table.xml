@@ -6,28 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.TableActivity">
 
-    <Button
-        android:id="@+id/table_button_goback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Voltar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.v7.widget.Toolbar>
 
+    </android.support.v7.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/table_recycler_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/table_button_goback"
         tools:listitem="@layout/event_item" />
 
 
