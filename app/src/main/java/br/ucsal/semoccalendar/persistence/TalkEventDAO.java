@@ -11,9 +11,9 @@ public class TalkEventDAO {
     private static final List<Event> events = new ArrayList<>();
 
     static {
-        events.add(new Event("BATE PAPO SOBRE O COMITÊ DE ÉTICA EM PESQUISA (CEP)", "18/10 | 9:30 às 12h"));
-        events.add(new Event("BATE PAPO SOBRE O CENTRO DE ESCRITA CIENTÍFICA (CEC)", "18/10 | 10h às 11h"));
-        events.add(new Event("BATE PAPO SOBRE CARREIRA PROFISSIONAL", "20/10 | 9H às 11h"));
+        events.add(new Event("BATE PAPO SOBRE O COMITÊ DE ÉTICA EM PESQUISA (CEP)", "18/10 | 9:30 às 12h", "SALA GOOGLE"));
+        events.add(new Event("BATE PAPO SOBRE O CENTRO DE ESCRITA CIENTÍFICA (CEC)", "18/10 | 10h às 11h", "SALA GOOGLE"));
+        events.add(new Event("BATE PAPO SOBRE CARREIRA PROFISSIONAL", "20/10 | 9H às 11h", "SALA GOOGLE"));
     }
 
     public List<Event> getEvents() {

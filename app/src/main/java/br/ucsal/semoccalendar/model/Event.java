@@ -4,10 +4,12 @@ public class Event {
 
     private String schedule;
     private String name;
+    private String place;
 
-    public Event(String name, String schedule) {
+    public Event(String name, String schedule, String place) {
         this.name = name;
         this.schedule = schedule;
+        this.place = place;
     }
 
     public String getSchedule() {
@@ -25,4 +27,14 @@ public class Event {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+
 }

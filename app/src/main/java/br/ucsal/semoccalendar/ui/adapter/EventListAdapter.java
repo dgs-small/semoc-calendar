@@ -30,6 +30,8 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.View
             schedule.setText(event.getSchedule());
             TextView name = itemView.findViewById(R.id.event_title);
             name.setText(event.getName());
+            TextView place = itemView.findViewById(R.id.event_place);
+            place.setText(event.getPlace());
         }
     }
 

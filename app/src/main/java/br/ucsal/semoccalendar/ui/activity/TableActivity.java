@@ -10,6 +10,7 @@ import java.util.Objects;
 
 import br.ucsal.semoccalendar.R;
 import br.ucsal.semoccalendar.model.Event;
+import br.ucsal.semoccalendar.persistence.JourneyEventDAO;
 import br.ucsal.semoccalendar.persistence.TableEventDAO;
 import br.ucsal.semoccalendar.ui.adapter.EventListAdapter;
 
