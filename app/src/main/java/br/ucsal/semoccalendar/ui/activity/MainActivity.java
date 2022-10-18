@@ -32,12 +32,22 @@ public class MainActivity extends AppCompatActivity {
         Button journeyButton = findViewById(R.id.main_button_journey);
         Button talkButton = findViewById(R.id.main_button_talk);
 
-        Intent tableIntent = new Intent(this, TableActivity.class);
-        Intent journeyIntent = new Intent(this, JourneyActivity.class);
-        Intent talkIntent = new Intent(this, TalkActivity.class);
+        Intent listIntent = new Intent(this, ListActivity.class);
 
-        tableButton.setOnClickListener(view -> startActivity(tableIntent));
-        journeyButton.setOnClickListener(view -> startActivity(journeyIntent));
-        talkButton.setOnClickListener(view -> startActivity(talkIntent));
+        tableButton.setOnClickListener(view -> {
+            listIntent.putExtra("type","table");
+            listIntent.putExtra("title","Mesa Redondas");
+            startActivity(listIntent);
+        });
+        journeyButton.setOnClickListener(view -> {
+            listIntent.putExtra("type", "journey");
+            listIntent.putExtra("title", "Jornadas de Pesquisa");
+            startActivity(listIntent);
+        });
+        talkButton.setOnClickListener(view -> {
+            listIntent.putExtra("type", "talk");
+            listIntent.putExtra("title", "Bate Papo");
+            startActivity(listIntent);
+        });
     }
 }

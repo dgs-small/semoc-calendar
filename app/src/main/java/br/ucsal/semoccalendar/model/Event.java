@@ -1,15 +1,16 @@
 package br.ucsal.semoccalendar.model;
 
 public class Event {
-
     private String schedule;
     private String name;
     private String place;
+    private String category;
 
-    public Event(String name, String schedule, String place) {
+    public Event(String name, String schedule, String place, String category) {
         this.name = name;
         this.schedule = schedule;
         this.place = place;
+        this.category = category;
     }
 
     public String getSchedule() {
@@ -36,5 +37,11 @@ public class Event {
         this.place = place;
     }
 
+    public String getCategory() {
+        return category;
+    }
 
+    public void setCategory(String category) {
+        this.category = Event.this.category;
+    }
 }
