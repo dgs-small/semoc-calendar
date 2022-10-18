@@ -35,17 +35,17 @@ public class MainActivity extends AppCompatActivity {
         Intent listIntent = new Intent(this, ListActivity.class);
 
         tableButton.setOnClickListener(view -> {
-            listIntent.putExtra("type","table");
+            listIntent.putExtra("category","table");
             listIntent.putExtra("title","Mesa Redondas");
             startActivity(listIntent);
         });
         journeyButton.setOnClickListener(view -> {
-            listIntent.putExtra("type", "journey");
+            listIntent.putExtra("category", "journey");
             listIntent.putExtra("title", "Jornadas de Pesquisa");
             startActivity(listIntent);
         });
         talkButton.setOnClickListener(view -> {
-            listIntent.putExtra("type", "talk");
+            listIntent.putExtra("category", "talk");
             listIntent.putExtra("title", "Bate Papo");
             startActivity(listIntent);
         });

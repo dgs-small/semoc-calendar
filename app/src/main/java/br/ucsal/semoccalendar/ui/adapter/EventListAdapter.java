@@ -6,13 +6,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 import java.util.List;
 import br.ucsal.semoccalendar.R;
 import br.ucsal.semoccalendar.model.Event;
 
 public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.ViewHolder> {
 
-    private final List<Event> events;
+    private List<Event> events;
 
     public EventListAdapter(List<Event> events) {
         this.events = events;
@@ -50,6 +52,11 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.View
     @Override
     public int getItemCount() {
         return events.size();
+    }
+
+    public void setFilterdList(List<Event> filteredList) {
+        events = filteredList;
+        notifyDataSetChanged();
     }
 }
 

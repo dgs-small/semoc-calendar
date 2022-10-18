@@ -355,10 +355,10 @@ public class EventDAO {
     }
 
     //    Simulate SQL select with %%
-    public List<Event> findByName(String query) {
+    public List<Event> findByName(String query, String category) {
         List<Event> filteredList = new ArrayList<>();
         for(Event event: events) {
-            if(event.getName().contains(query)) filteredList.add(event);
+            if(event.getName().toLowerCase().contains(query.toLowerCase()) && event.getCategory().equals(category)) filteredList.add(event);
         }
         return filteredList;
     }

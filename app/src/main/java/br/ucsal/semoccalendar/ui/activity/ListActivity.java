@@ -20,7 +20,7 @@ import br.ucsal.semoccalendar.ui.adapter.EventListAdapter;
 public class ListActivity extends AppCompatActivity {
 
     private final EventDAO eventDAO = new EventDAO();
-
+    private EventListAdapter eventListAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +31,9 @@ public class ListActivity extends AppCompatActivity {
 
         List<Event> events;
 
-        String type = getIntent().getStringExtra("type");
+        String category = getIntent().getStringExtra("category");
 
-        switch (type) {
+        switch (category) {
             case "talk" -> events = eventDAO.getTalks();
             case "journey" -> events = eventDAO.getJourneys();
             case "table" -> events = eventDAO.getTables();
@@ -43,7 +43,17 @@ public class ListActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.list_recycler_view);
         EditText searchInput = findViewById(R.id.list_input_search);
 
+        eventListAdapter = new EventListAdapter(events);
+        recyclerView.setAdapter(eventListAdapter);
+
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
         searchInput.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                eventListAdapter.setFilterdList(eventDAO.findByName(editable.toString(), category));
+            }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -53,17 +63,6 @@ public class ListActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
         });
-
-        recyclerView.setAdapter(new EventListAdapter(events));
-
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
-
     }
 }
